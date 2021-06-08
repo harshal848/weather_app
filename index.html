@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Masai Weather App</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src='main.js'></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Merriweather', serif;
+            max-width: 50%; 
+            /* margin: 50px; */
+            color: #444;
+        }
+        .container {
+            max-width: 50%;
+            margin: auto;
+            padding:0px 50px 0px 50px;
+            display: table-cell;
+        }
+        .inputText, .inputText2 {
+            width: 350px;
+            height: 30px;
+            margin-top: 15px;
+        }
+        .date{
+            height: 35px;
+            margin-top: 15px;
+        }
+        p{
+            margin: 0px;
+            padding: 0px;
+        }
+        #weather-button {
+            height: 35px;
+        }
+        .weather-card {
+            width: 455px;
+            height: 250px;
+            margin-top: 15px;
+            box-shadow: 3px 4px 6px 1px rgba(0, 0, 0, 0.29);
+            display: flex;
+            justify-content: space-around;
+        }
+        .title, .title2 {
+            margin-top: 10px;
+            font-size: 32px;
+        }
+        .subtitle, .subtitle2 {
+            font-size: 16px;
+            color: #666;
+        }
+        .temperature, .temperature2 {
+            font-size: 30px;
+            margin-top: 10px;
+            color: coral;
+        }
+        .other-info {
+            margin-top: 10px;
+        }
+        .weather-image {
+            margin-top: 50%;
+        }
+        .city-name, .city-name2{
+            color: coral;
+        }
+        h1{
+            width:max-content;
+            margin-bottom: 0px;
+            padding: 0px;
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Get Live Weather Data</h1>
+        <input class="inputText" type="text" placeholder="Enter City">
+        <div id="test"></div>
+        <button onclick="getWeather()" id="weather-button">Get Weather</button>
+        
+        <div class="weather-card">
+            <div class="left">
+                <div class="title">
+                    <span class="city-name">Pune</span> <span class="country">India</span>
+                    <div class="subtitle">Sat, May 29, Cloudy</div>
+                </div>
+                <div class="temperature">
+                    25° C
+                </div>
+                <div class="other-info" id="humidity">
+                    Humidity: 35%
+                </div>
+                <div class="other-info" id="wind">
+                    Wind: 7 Km/h
+                </div>
+
+            </div>
+            <div class="right">
+                <img class="weather-image" height="100px" src="https://meta-weather.vercel.app/static/img/weather/s.svg">
+            </div>
+        </div>
+    </div>
+
+	<!-- Working on this -->
+  <!-- <div class="container">
+        <h1>Get Historical Weather Data</h1>
+        <input class="inputText2" type="text" placeholder="Enter City">
+        
+        <p class="date">Select Date: <input class="inputDate" type="date"></p>
+        <button onclick="getHistoricalWeather()" id="weather-button">Get Weather</button>
+        
+        <div class="weather-card">
+            <div class="left">
+                <div class="title">
+                    <span class="city-name2">Pune</span> <span class="country2">India</span>
+                    <div class="subtitle2">Sat, May 29, Cloudy</div>
+                </div>
+                <div class="temperature2">
+                    25° C
+                </div>
+                <div class="other-info" id="humidity2">
+                    Humidity: 35%
+                </div>
+                <div class="other-info" id="wind2">
+                    Wind: 7 Km/h
+                </div>
+
+            </div>
+            <div class="right">
+                <img class="weather-image" height="100px" src="https://meta-weather.vercel.app/static/img/weather/s.svg">
+            </div>
+        </div>
+    </div>  -->
+
+</body>
+</html>
